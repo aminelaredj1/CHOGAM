@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "home": "Home",
+    "collection": "Collection",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Cart",
+    "language": "Language"
+  },
+  "hero": {
+    "eyebrow": "Chogam — Algerian Luxury Perfume House",
+    "title": "Bravento",
+    "subtitle": "An irresistible force. An undefinable elegance.",
+    "cta": "Discover the Collection",
+    "scrollHint": "Discover"
+  },
+  "brand": {
+    "eyebrow": "Our Story",
+    "title": "Art in every spritz",
+    "description": "Chogam is more than a fragrance — it's an expression of identity and distinction. Born in Algeria with a passion for crafting luxury perfumes that carry the soul of the East and the elegance of the West. Every bottle is a handcrafted masterpiece, every scent a poem.",
+    "quote": "Perfume is the clothing you cannot see, yet it is the first thing noticed.",
+    "quoteAuthor": "The Chogam Philosophy"
+  },
+  "featured": {
+    "eyebrow": "Signature Selection",
+    "title": "Our Fragrances",
+    "subtitle": "Explore our range of luxury perfumes",
+    "viewAll": "View Full Collection"
+  },
+  "notes": {
+    "eyebrow": "Olfactory Philosophy",
+    "title": "The Notes Pyramid",
+    "subtitle": "Every fragrance is a three-dimensional poem",
+    "top": "Top Notes",
+    "heart": "Heart Notes",
+    "base": "Base Notes",
+    "topDesc": "The first impression — vivid and vibrant",
+    "heartDesc": "The soul of the fragrance — true character",
+    "baseDesc": "The lasting imprint — lingers long",
+    "discover": "Discover Bravento"
+  },
+  "testimonials": {
+    "eyebrow": "What our clients say",
+    "title": "Real Experiences"
+  },
+  "quickOrder": {
+    "eyebrow": "Order Now",
+    "title": "Delivered to your door",
+    "subtitle": "Order via WhatsApp or call us directly — Cash on Delivery",
+    "cta": "Order via WhatsApp",
+    "call": "Call Us",
+    "freeDelivery": "Free Delivery",
+    "codPayment": "Cash on Delivery",
+    "originalProduct": "100% Authentic"
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "orderViaWhatsapp": "Order via WhatsApp",
+    "quantity": "Quantity",
+    "size": "Size",
+    "description": "Description",
+    "ingredients": "Ingredients",
+    "delivery": "Delivery & Returns",
+    "topNotes": "Top Notes",
+    "heartNotes": "Heart Notes",
+    "baseNotes": "Base Notes",
+    "relatedProducts": "Related Products",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "bestSeller": "Best Seller",
+    "newArrival": "New",
+    "limited": "Limited Edition",
+    "quickView": "Quick View",
+    "perBottle": "per bottle"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "emptyDesc": "Discover our collection and add your favorites",
+    "subtotal": "Subtotal",
+    "proceedToOrder": "Proceed to Order",
+    "remove": "Remove",
+    "continueShopping": "Continue Shopping",
+    "itemAdded": "Added to cart"
+  },
+  "form": {
+    "fullName": "Full Name",
+    "phone": "Phone Number",
+    "wilaya": "Wilaya",
+    "address": "Address & Commune",
+    "product": "Product",
+    "quantity": "Quantity",
+    "note": "Note (optional)",
+    "submit": "Confirm Order",
+    "confirm": "Confirm via WhatsApp",
+    "orderSummary": "Order Summary",
+    "thankYou": "Thank you!",
+    "orderReceived": "Your order has been received. We'll contact you soon.",
+    "errors": {
+      "nameRequired": "Name is required",
+      "phoneInvalid": "Invalid phone number (e.g. 0554976933)",
+      "wilayaRequired": "Wilaya is required",
+      "addressRequired": "Address is required",
+      "quantityMin": "Minimum quantity is 1"
+    }
+  },
+  "footer": {
+    "tagline": "The luxury that reflects your personality",
+    "links": "Quick Links",
+    "contact": "Contact",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Subscribe to receive the latest Chogam news and exclusive offers",
+    "subscribe": "Subscribe",
+    "emailPlaceholder": "Your email",
+    "rights": "All rights reserved",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp"
+  },
+  "contact": {
+    "whatsapp": "WhatsApp",
+    "call": "Call"
+  }
+}

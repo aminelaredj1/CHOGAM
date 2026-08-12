@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "collection": "Collection",
+    "about": "À propos",
+    "contact": "Contact",
+    "cart": "Panier"
+  },
+  "hero": {
+    "eyebrow": "Chogam — Maison de Parfum Algérienne",
+    "title": "Chogam",
+    "subtitle": "Une force irrésistible. Une élégance indéfinissable.",
+    "cta": "Découvrir la Collection",
+    "scrollHint": "Découvrir"
+  },
+  "brand": {
+    "eyebrow": "Notre Histoire",
+    "title": "L'art dans chaque vaporisation",
+    "description": "Chogam est bien plus qu'un parfum — c'est une expression d'identité et de distinction. Née en Algérie avec la passion de créer des fragrances de luxe qui portent l'âme de l'Orient et l'élégance de l'Occident. Chaque flacon est une œuvre artisanale, chaque senteur est un poème.",
+    "quote": "Le parfum est le vêtement qu'on ne voit pas, mais qu'on remarque en premier.",
+    "quoteAuthor": "La philosophie Chogam"
+  },
+  "featured": {
+    "eyebrow": "Sélection Signature",
+    "title": "Nos Parfums",
+    "subtitle": "Découvrez notre gamme de fragrances de luxe",
+    "viewAll": "Voir toute la collection"
+  },
+  "notes": {
+    "eyebrow": "Philosophie Olfactive",
+    "title": "La Pyramide des Notes",
+    "subtitle": "Chaque parfum est un poème en trois dimensions",
+    "top": "Notes de Tête",
+    "heart": "Notes de Cœur",
+    "base": "Notes de Fond",
+    "topDesc": "La première impression — vivante et vibrante",
+    "heartDesc": "L'âme du parfum — le caractère véritable",
+    "baseDesc": "L'empreinte durable — elle reste longtemps",
+    "discover": "Découvrir Chogam"
+  },
+  "testimonials": {
+    "eyebrow": "Ce que disent nos clients",
+    "title": "Expériences authentiques"
+  },
+  "quickOrder": {
+    "eyebrow": "Commander maintenant",
+    "title": "Livraison à votre porte",
+    "subtitle": "Commandez via WhatsApp ou appelez-nous — Paiement à la livraison",
+    "cta": "Commander via WhatsApp",
+    "call": "Nous appeler",
+    "freeDelivery": "Livraison gratuite",
+    "codPayment": "Paiement à la livraison",
+    "originalProduct": "Produit 100% authentique"
+  },
+  "product": {
+    "addToCart": "Ajouter au panier",
+    "orderViaWhatsapp": "Commander via WhatsApp",
+    "quantity": "Quantité",
+    "size": "Taille",
+    "description": "Description",
+    "ingredients": "Ingrédients",
+    "delivery": "Livraison & Retours",
+    "topNotes": "Notes de Tête",
+    "heartNotes": "Notes de Cœur",
+    "baseNotes": "Notes de Fond",
+    "relatedProducts": "Produits similaires",
+    "inStock": "En stock",
+    "outOfStock": "Rupture de stock",
+    "bestSeller": "Best Seller",
+    "newArrival": "Nouveauté",
+    "limited": "Édition Limitée",
+    "quickView": "Aperçu rapide",
+    "perBottle": "par flacon"
+  },
+  "cart": {
+    "title": "Mon Panier",
+    "empty": "Votre panier est vide",
+    "emptyDesc": "Découvrez notre collection et ajoutez vos favoris",
+    "subtotal": "Sous-total",
+    "proceedToOrder": "Passer la commande",
+    "remove": "Supprimer",
+    "continueShopping": "Continuer les achats",
+    "itemAdded": "Ajouté au panier"
+  },
+  "form": {
+    "fullName": "Nom complet",
+    "phone": "Numéro de téléphone",
+    "wilaya": "Wilaya",
+    "address": "Adresse & Commune",
+    "product": "Produit",
+    "quantity": "Quantité",
+    "note": "Note (optionnel)",
+    "submit": "Confirmer la commande",
+    "confirm": "Confirmer via WhatsApp",
+    "orderSummary": "Récapitulatif",
+    "thankYou": "Merci !",
+    "orderReceived": "Votre commande a été reçue. Nous vous contacterons bientôt.",
+    "errors": {
+      "nameRequired": "Le nom est requis",
+      "phoneInvalid": "Numéro invalide (ex: 0554976933)",
+      "wilayaRequired": "La wilaya est requise",
+      "addressRequired": "L'adresse est requise",
+      "quantityMin": "La quantité minimale est 1"
+    }
+  },
+  "footer": {
+    "tagline": "Le luxe qui reflète votre personnalité",
+    "links": "Liens rapides",
+    "contact": "Contact",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Inscrivez-vous pour recevoir les dernières nouvelles et offres exclusives Chogam",
+    "subscribe": "S'inscrire",
+    "emailPlaceholder": "Votre email",
+    "rights": "Tous droits réservés",
+    "phone": "Téléphone",
+    "whatsapp": "WhatsApp"
+  },
+  "contact": {
+    "whatsapp": "WhatsApp",
+    "call": "Appeler"
+  }
+}
