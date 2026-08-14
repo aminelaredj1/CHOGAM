@@ -100,10 +100,10 @@ export function Hero() {
       ))}
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center min-h-screen py-24 lg:py-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center min-h-screen pt-28 pb-12 lg:py-0">
           {/* Text Column */}
           <motion.div
-            className="flex flex-col items-start gap-6 order-2 lg:order-1"
+            className="flex flex-col items-center lg:items-start text-center lg:text-start gap-4 md:gap-6 order-2 lg:order-1"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -113,70 +113,70 @@ export function Hero() {
             <motion.p className="eyebrow-text" variants={itemVariants}>
               {t("hero.eyebrow")}
             </motion.p>
-
+ 
             {/* Gold divider line */}
             <motion.div
-              className="w-12 h-px bg-chogam-gold"
+              className="w-12 h-px bg-chogam-gold hidden lg:block"
               variants={itemVariants}
             />
-
+ 
             {/* Main Title */}
             <motion.h1
-              className="heading-display text-6xl sm:text-7xl lg:text-8xl text-chogam-white leading-none"
+              className="heading-display text-4xl sm:text-6xl lg:text-8xl text-chogam-white leading-tight lg:leading-none"
               variants={itemVariants}
             >
               <span className="text-gold-gradient">{t("hero.title")}</span>
             </motion.h1>
-
+ 
             {/* Subtitle */}
             <motion.p
-              className="font-sans text-base md:text-lg text-chogam-goldSoft/70 max-w-md leading-relaxed"
+              className="font-sans text-sm md:text-lg text-chogam-goldSoft/70 max-w-md leading-relaxed px-4 lg:px-0"
               variants={itemVariants}
             >
               {t("hero.subtitle")}
             </motion.p>
-
+ 
             {/* Product tag */}
             <motion.div
               className="flex items-center gap-3 border border-chogam-gold/20 px-4 py-2"
               variants={itemVariants}
             >
-              <span className="font-sans text-xs text-chogam-goldSoft/50 tracking-widest uppercase">
+              <span className="font-sans text-[10px] sm:text-xs text-chogam-goldSoft/50 tracking-widest uppercase">
                 Eau de Parfum Pour Homme
               </span>
               <span className="w-px h-4 bg-chogam-gold/30" />
-              <span className="font-serif text-sm text-chogam-gold">100ml</span>
+              <span className="font-serif text-xs sm:text-sm text-chogam-gold">100ml</span>
             </motion.div>
-
+ 
             {/* CTAs */}
-            <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
-              <GoldButton variant="solid" size="lg" href="/collection">
+            <motion.div className="flex justify-center lg:justify-start gap-3 w-full" variants={itemVariants}>
+              <GoldButton variant="solid" size="md" href="/collection">
                 {t("hero.cta")}
               </GoldButton>
-              <GoldButton variant="outline" size="lg" href="/product/chogam">
+              <GoldButton variant="outline" size="md" href="/product/chogam">
                 Chogam
               </GoldButton>
             </motion.div>
-
+ 
             {/* Trust micro-signals */}
             <motion.div
-              className="flex items-center gap-5 pt-2"
+              className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-5 pt-2 px-2"
               variants={itemVariants}
             >
-              {["Livraison gratuite", "Paiement à la livraison", "Authenticité garantie"].map((tag) => (
+              {["Livraison gratuite", "Paiement à la livraison", "Authenticité"].map((tag) => (
                 <div key={tag} className="flex items-center gap-1.5">
-                  <div className="w-1.5 h-1.5 rounded-full bg-chogam-gold" />
-                  <span className="font-sans text-xs text-chogam-goldSoft/50 tracking-wide">
+                  <div className="w-1 h-1 rounded-full bg-chogam-gold" />
+                  <span className="font-sans text-[10px] sm:text-xs text-chogam-goldSoft/50 tracking-wide">
                     {tag}
                   </span>
                 </div>
               ))}
             </motion.div>
           </motion.div>
-
+ 
           {/* Bottle Column — 3D parallax */}
           <motion.div
-            className="relative flex items-center justify-center order-1 lg:order-2 h-[50vh] lg:h-full"
+            className="relative flex items-center justify-center order-1 lg:order-2 h-[35vh] sm:h-[45vh] lg:h-full mt-4 lg:mt-0"
             style={{ y: bottleY, scale: bottleScale, opacity }}
           >
             <motion.div

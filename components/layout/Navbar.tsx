@@ -124,25 +124,51 @@ export function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="glass lg:hidden border-t border-chogam-gold/10 overflow-hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-40 lg:hidden bg-chogam-midnight/60 backdrop-blur-md"
           >
-            <ul className="px-6 py-4 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="font-sans text-sm font-medium tracking-widest uppercase text-chogam-goldSoft/80 hover:text-chogam-gold transition-colors duration-300"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {/* Drawer Content */}
+            <motion.div
+              initial={{ x: dir === "rtl" ? "100%" : "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: dir === "rtl" ? "100%" : "-100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="absolute top-0 bottom-0 start-0 w-[80vw] max-w-[320px] bg-chogam-midnight/95 border-e border-chogam-gold/15 p-6 pt-24 flex flex-col justify-between shadow-2xl"
+            >
+              <div className="flex flex-col gap-8">
+                <div className="border-b border-chogam-gold/10 pb-4">
+                  <p className="font-serif text-2xl font-semibold tracking-widest text-chogam-gold">CHOGAM</p>
+                  <p className="font-sans text-[10px] text-chogam-goldSoft/40 tracking-widest uppercase mt-1">L'art du parfum</p>
+                </div>
+                <ul className="flex flex-col gap-6">
+                  {navLinks.map((link, idx) => (
+                    <motion.li
+                      key={link.href}
+                      initial={{ opacity: 0, x: dir === "rtl" ? 20 : -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: idx * 0.08 }}
+                    >
+                      <Link
+                        href={link.href}
+                        onClick={() => setMobileOpen(false)}
+                        className="font-sans text-base font-semibold tracking-widest uppercase text-chogam-goldSoft/80 hover:text-chogam-gold transition-colors duration-300 block py-1"
+                      >
+                        {link.label}
+                      </Link>
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Mobile Drawer Footer */}
+              <div className="border-t border-chogam-gold/10 pt-6">
+                <p className="font-sans text-xs text-chogam-goldSoft/40 tracking-wider">
+                  © {new Date().getFullYear()} CHOGAM Paris.
+                </p>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
