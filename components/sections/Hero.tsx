@@ -174,49 +174,70 @@ export function Hero() {
             </motion.div>
           </motion.div>
  
-          {/* Bottle Column — 3D parallax */}
+          {/* Bottle Column — 3D parallax with Seamless Backdrop Fusion */}
           <motion.div
-            className="relative flex items-center justify-center order-1 lg:order-2 h-[35vh] sm:h-[45vh] lg:h-full mt-4 lg:mt-0"
+            className="relative flex items-center justify-center order-1 lg:order-2 h-[40vh] sm:h-[50vh] lg:h-full mt-4 lg:mt-0"
             style={{ y: bottleY, scale: bottleScale, opacity }}
           >
             <motion.div
-              className="relative w-72 h-96 sm:w-80 sm:h-[28rem] lg:w-96 lg:h-[36rem]"
+              className="relative w-72 h-96 sm:w-80 sm:h-[28rem] lg:w-[420px] lg:h-[480px] flex items-center justify-center"
               style={{
                 rotateX,
                 rotateY,
                 transformStyle: "preserve-3d",
-                perspective: "1000px",
+                perspective: "1200px",
               }}
             >
-              {/* Glow behind bottle */}
-              <div className="absolute inset-0 bg-chogam-gold/8 blur-3xl rounded-full scale-75 translate-y-8" />
+              {/* Dynamic Radial Ambient Light behind the bottle (Seamless backdrop fusion) */}
+              <div 
+                className="absolute w-[80%] h-[80%] rounded-full bg-radial-gradient from-chogam-gold/15 via-chogam-gold/3 to-transparent blur-3xl pointer-events-none"
+                style={{
+                  transform: "translateZ(-80px) scale(1.1)",
+                }}
+              />
 
-              {/* Bottle image */}
+              {/* Advanced 3D Realistic Soft Drop Shadow — Moves dynamically opposite to tilt */}
+              <motion.div 
+                className="absolute w-[60%] h-[15%] rounded-full bg-black/75 blur-2xl pointer-events-none bottom-4"
+                style={{
+                  transform: "translateZ(-100px) rotateX(85deg)",
+                  opacity: 0.85,
+                }}
+              />
+
+              {/* Bottle image Container with high-tech 3D layers */}
               <motion.div
-                className="relative w-full h-full"
-                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                className="relative w-full h-full cursor-pointer select-none"
+                style={{
+                  transform: "translateZ(50px)",
+                  transformStyle: "preserve-3d",
+                }}
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
               >
                 <Image
                   src="/products/bravento/bravento-hero-marble.png"
                   alt="شوجام — او دو بارفان بور أوم"
                   fill
-                  className="object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,0.8)]"
+                  className="object-contain filter contrast-[1.05] brightness-[1.02]"
                   priority
-                  sizes="(max-width: 768px) 80vw, 50vw"
+                  sizes="(max-width: 768px) 80vw, 45vw"
                 />
               </motion.div>
 
-              {/* Floating label */}
+              {/* Floating luxury glass badge detailing price */}
               <motion.div
-                className="absolute -end-4 top-1/4 glass border border-chogam-gold/20 px-3 py-2 hidden lg:block"
+                className="absolute -end-6 top-1/3 glass border border-chogam-gold/25 px-4 py-2.5 hidden lg:block backdrop-blur-md rounded-lg shadow-xl"
+                style={{
+                  transform: "translateZ(90px)",
+                }}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 1.2, delay: 1, ease: [0.16, 1, 0.3, 1] }}
               >
-                <p className="font-sans text-xs text-chogam-goldSoft/60 tracking-wider">CHOGAM</p>
-                <p className="font-sans text-xs text-chogam-gold">3 500 DZD</p>
+                <p className="font-sans text-[10px] text-chogam-goldSoft/60 tracking-widest uppercase">CHOGAM</p>
+                <p className="font-serif text-sm text-chogam-gold font-bold mt-0.5">3 500 DZD</p>
               </motion.div>
             </motion.div>
           </motion.div>
