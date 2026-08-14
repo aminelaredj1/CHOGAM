@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingContactButton } from "@/components/layout/FloatingContactButton";
 import { CartDrawer } from "@/components/layout/CartDrawer";
+import { ChameleonController } from "@/components/ui/ChameleonController";
 
 export const metadata: Metadata = {
   title: "CHOGAM (شوجام) — Maison de Parfum Algérienne de Luxe",
@@ -54,6 +55,7 @@ export default function RootLayout({
           <Footer />
           <FloatingContactButton />
           <CartDrawer />
+          <ChameleonController />
         </I18nProvider>
       </body>
     </html>
