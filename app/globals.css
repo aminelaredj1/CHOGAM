@@ -94,7 +94,7 @@ body::before {
 
 /* ─── Gold Gradient Text ──────────────────────────────────────────────── */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #D4AF37 0%, #f0d060 50%, #D4AF37 100%);
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
