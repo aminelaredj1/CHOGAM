@@ -24,7 +24,7 @@ interface ProductPageProps {
 
 export default function ProductPage({ params }: ProductPageProps) {
   const { t, dir } = useI18n();
-  const { products, fetchProducts, isLoading } = useUserProductStore();
+  const { products, fetchProducts, isLoading, hasFetched } = useUserProductStore();
   const addItem = useCartStore((s) => s.addItem);
   const openCart = useCartStore((s) => s.openCart);
 
@@ -51,8 +51,8 @@ export default function ProductPage({ params }: ProductPageProps) {
 
   const product = products.find((p) => p.slug === params.slug);
 
-  // Show skeleton while loading
-  if (!product && isLoading) {
+  // Show skeleton while fetching for the first time
+  if (isLoading || !hasFetched) {
     return (
       <div className="min-h-screen bg-[#0B1320] pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -69,6 +69,7 @@ export default function ProductPage({ params }: ProductPageProps) {
     );
   }
 
+  // Only show not found AFTER fetch has completed
   if (!product) {
     return (
       <div className="min-h-screen bg-[#0B1320] flex items-center justify-center flex-col gap-4">

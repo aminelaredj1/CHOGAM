@@ -5,6 +5,7 @@ import { type Product, products as initialProducts } from "@/data/products";
 interface UserProductStore {
   products: Product[];
   isLoading: boolean;
+  hasFetched: boolean;
   error: string | null;
   fetchProducts: () => Promise<void>;
 }
@@ -39,7 +40,8 @@ function mapDbProductToLocal(dbProduct: any): Product {
 
 export const useUserProductStore = create<UserProductStore>((set) => ({
   products: initialProducts, // fallback to static data
-  isLoading: false,
+  isLoading: true,           // start as true — wait for first fetch
+  hasFetched: false,
   error: null,
 
   fetchProducts: async () => {
@@ -54,13 +56,15 @@ export const useUserProductStore = create<UserProductStore>((set) => ({
 
       if (data && data.length > 0) {
         const localProducts = data.map(mapDbProductToLocal);
-        set({ products: localProducts, isLoading: false });
+        set({ products: localProducts, isLoading: false, hasFetched: true });
       } else {
-        set({ isLoading: false });
+        // Keep static fallback if DB is empty
+        set({ isLoading: false, hasFetched: true });
       }
     } catch (err: any) {
       console.error("Error fetching products for client:", err);
-      set({ error: err.message, isLoading: false });
+      // Keep static fallback on error
+      set({ error: err.message, isLoading: false, hasFetched: true });
     }
   },
 }));
