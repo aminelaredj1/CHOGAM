@@ -131,9 +131,9 @@ export function Navbar() {
           >
             {/* Drawer Content */}
             <motion.div
-              initial={{ x: dir === "rtl" ? "100%" : "-100%" }}
+              initial={{ x: (dir as string) === "rtl" ? "100%" : "-100%" }}
               animate={{ x: 0 }}
-              exit={{ x: dir === "rtl" ? "100%" : "-100%" }}
+              exit={{ x: (dir as string) === "rtl" ? "100%" : "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
               className="absolute top-0 bottom-0 start-0 w-[80vw] max-w-[320px] bg-chogam-midnight/95 border-e border-chogam-gold/15 p-6 pt-24 flex flex-col justify-between shadow-2xl"
             >
@@ -146,7 +146,7 @@ export function Navbar() {
                   {navLinks.map((link, idx) => (
                     <motion.li
                       key={link.href}
-                      initial={{ opacity: 0, x: dir === "rtl" ? 20 : -20 }}
+                      initial={{ opacity: 0, x: (dir as string) === "rtl" ? 20 : -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: idx * 0.08 }}
                     >

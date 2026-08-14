@@ -226,8 +226,8 @@ export function Hero() {
                   priority
                   sizes="(max-width: 768px) 80vw, 45vw"
                 />
-              </motion.div>>
               </motion.div>
+
 
               {/* Floating luxury glass badge detailing price */}
               <motion.div
