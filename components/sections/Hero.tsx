@@ -21,18 +21,18 @@ export function Hero() {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
-  // Mouse-tracking 3D tilt
+  // Mouse-tracking 3D tilt with HIGHER sensitivity (increased angles from 8 to 22)
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-  const rotateX = useSpring(useTransform(mouseY, [-300, 300], [8, -8]), {
-    stiffness: 60,
-    damping: 20,
+  const rotateX = useSpring(useTransform(mouseY, [-300, 300], [22, -22]), {
+    stiffness: 120, // Increased for ultra-responsiveness
+    damping: 15,
   });
-  const rotateY = useSpring(useTransform(mouseX, [-300, 300], [-8, 8]), {
-    stiffness: 60,
-    damping: 20,
+  const rotateY = useSpring(useTransform(mouseX, [-300, 300], [-22, 22]), {
+    stiffness: 120, // Increased for ultra-responsiveness
+    damping: 15,
   });
-
+ 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     mouseX.set(e.clientX - rect.left - rect.width / 2);
@@ -42,7 +42,7 @@ export function Hero() {
     mouseX.set(0);
     mouseY.set(0);
   };
-
+ 
   const containerVariants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.15, delayChildren: 0.3 } },
@@ -55,18 +55,18 @@ export function Hero() {
       transition: { duration: 1, ease: [0.22, 1, 0.36, 1] as [number,number,number,number] },
     },
   };
-
+ 
   return (
     <div
       ref={heroRef}
-      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-chogam-midnight via-chogam-charcoal to-chogam-midnight"
+      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-chogam-midnight via-chogam-charcoal to-chogam-midnight select-none"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       dir={dir}
     >
       {/* Radial spotlight */}
       <div className="absolute inset-0 radial-spotlight" />
-
+ 
       {/* Background grid pattern */}
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -76,7 +76,7 @@ export function Hero() {
           backgroundSize: "60px 60px",
         }}
       />
-
+ 
       {/* Floating gold particles */}
       {[...Array(6)].map((_, i) => (
         <motion.div
@@ -98,7 +98,7 @@ export function Hero() {
           }}
         />
       ))}
-
+ 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center min-h-screen pt-28 pb-12 lg:py-0">
           {/* Text Column */}
@@ -195,7 +195,7 @@ export function Hero() {
                   transform: "translateZ(-80px) scale(1.1)",
                 }}
               />
-
+ 
               {/* Advanced 3D Realistic Soft Drop Shadow — Moves dynamically opposite to tilt */}
               <motion.div 
                 className="absolute w-[60%] h-[15%] rounded-full bg-black/75 blur-2xl pointer-events-none bottom-4"
@@ -204,26 +204,29 @@ export function Hero() {
                   opacity: 0.85,
                 }}
               />
-
-              {/* Bottle image Container with high-tech 3D layers */}
+ 
+              {/* Bottle image Container with high-tech 3D layers and luxury tactile press spring effect */}
               <motion.div
                 className="relative w-full h-full cursor-pointer select-none"
                 style={{
                   transform: "translateZ(50px)",
                   transformStyle: "preserve-3d",
                 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.92, rotateZ: -1 }} // Interactive luxury press feedback
+                transition={{ type: "spring", stiffness: 350, damping: 15 }}
                 initial={{ opacity: 0, y: 30, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
               >
                 <Image
                   src="/products/bravento/bravento-hero-marble.png"
                   alt="شوجام — او دو بارفان بور أوم"
                   fill
-                  className="object-contain filter contrast-[1.05] brightness-[1.02]"
+                  className="object-contain filter contrast-[1.05] brightness-[1.02] mix-blend-lighten"
                   priority
                   sizes="(max-width: 768px) 80vw, 45vw"
                 />
+              </motion.div>>
               </motion.div>
 
               {/* Floating luxury glass badge detailing price */}
